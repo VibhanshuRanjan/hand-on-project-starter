@@ -7,7 +7,7 @@ import "./MarketplaceDashboard.scss"
 const MarketplaceDashboard = () => {
   return (
     <div className="marketplaceDashboard">
-        <Navbar />
+        <Navbar login={false}/>
         <div className="dashboard_body">
         <div className="dashboard_header">
             <DashboardHeader />

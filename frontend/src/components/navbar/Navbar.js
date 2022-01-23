@@ -3,8 +3,8 @@ import Button from '../button/Button';
 import './Navbar.scss'
 
 
-const Navbar = () => {
-  const user=true;
+const Navbar = (navbar) => {
+  const user=false;
   return(
       <div className="navbar">
           <div className="nav_left">
@@ -23,9 +23,13 @@ const Navbar = () => {
               </div>
           </div>):
           (
-            <div className="nav_btn">
-                <Button value="Login/Signup" color="color-142683" size="size-133-44"/>
-              </div>
+                !navbar.login && (
+                    <div className="nav_btn">
+                        <Button value="Login" color="color-142683" size="size-133-44"/>
+                    </div>
+
+                )
+              
           )}
       </div>
   )

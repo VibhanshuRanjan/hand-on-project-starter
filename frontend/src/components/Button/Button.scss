@@ -6,10 +6,27 @@
     border-radius: 0.6vh;
     background-color: #142683;
     color: white;
+    font-size: 1vw;
+    border-style: none;
 }
+.button:hover{
+    cursor: pointer;
+    color: #918e8e;
+}
+
 .size-133-44{
     width: 9.236vw;
     height: 4.89vh;
+}
+
+.size-400-44{
+    width: 27.78vw;
+    height: 4.89vh;
+}
+
+.size-82-36{
+    width: 5.7vw;
+    height: 4vh;
 }
 
 
@@ -19,4 +36,8 @@
 
 .color-1E272E{
     background: #1E272E;
+}
+
+.color_black{
+    background: rgb(6, 11, 14);
 }
