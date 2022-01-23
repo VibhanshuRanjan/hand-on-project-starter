@@ -1,0 +1,51 @@
+.navbar{
+    height: 9.78vh;
+    /* 88px */
+    display: flex;  
+    //padding: 22px 60px;
+    justify-content: space-between;  
+    align-items: center;
+    // margin: 0 4.17vw;
+}
+
+.nav_left{
+    margin-left: 4.17vw;
+}
+
+.nav_right{
+    display: flex;
+    align-items: center;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.02em;
+    text-align: left;
+}
+
+.nav_right_myApis{
+    margin-right: 4.17vw;
+    color:#566474;    
+}
+
+.nav_right_myApis:hover{
+    color:#4267B2;
+    cursor: pointer;
+}
+
+.nav_right_myAccount{
+    margin-right: 4.17vw;
+    color:#566474; 
+}
+
+.nav_right_myAccount:hover{
+    color:#4267B2;
+    cursor: pointer;
+}
+
+.nav_btn{
+    margin-right: 4.17vw;
+    font-weight: 700;
+}
+

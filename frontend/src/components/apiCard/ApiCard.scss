@@ -1,0 +1,38 @@
+.apiCard{
+    width: 17.653vw;
+    height: 36.41vh;
+    padding: 1vh 0.5vw 1vh 0.5vw;
+    /* display: inline-block; */
+}
+
+.apiCard:hover{
+    background-color: #fffbfb;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 1em;
+}
+.apiCard_img{
+    height: 21.11vh;
+    width: 17.653vw;
+}
+.apiCard_info{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; 
+    width: 17.653vw;  
+}
+.apiCard_info_title{
+    color: #1E272E;
+    font-family: DM Sans;
+    font-size: 1.5em;
+    font-weight:500;
+    margin-top: 3.33vh;
+}
+
+.apiCard_info_desc{
+    color: #566474;
+    font-family: DM Sans;
+    font-size: 1em;
+    font-weight:400;
+    margin-top: 1.22vh;
+    height: 3.89vh;
+}

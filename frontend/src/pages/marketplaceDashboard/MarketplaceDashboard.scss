@@ -1,0 +1,30 @@
+.dashboard_body{
+    height: 90.22vh;
+    background-color: #f8f6f6;    
+}
+
+.dashboard_header{
+    position: absolute; 
+    margin: 60px 6.944vw; 
+}
+
+.dashboard_allApis_text{
+    position: absolute;
+    margin-top: 34vh;
+    margin-left: 6.944vw;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #000000;
+    font-family: DM Sans;
+}
+
+.dashboard_allApis{
+    width: 86.11vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    margin-top: 42.22vh;
+    margin-left: 6.944vw;
+    margin-right: 6.944vw;
+}

@@ -1,0 +1,57 @@
+.dashboardHeader{
+    height: 20.67vh;
+    width: 86.11vw;
+    display: flex;
+    background: #C3E7FD;
+}
+
+.dashboard_header_left{
+    background: #D3B4F6;
+    width: 26vw;
+    border-radius: 0 7.06em 7.06em 0;
+}
+
+.dashboard_header_left_img{
+    height: 20.67vh;
+    width: 18.417vw;
+}
+
+.dashboard_header_info{
+    height: 20.67vh;
+    /* position: absolute; */
+    margin-left: 3.47vw;
+    overflow: hidden;
+    /* align-items: center; */
+}
+
+.dashboard_header_info_title{
+    font-family: Bebas Neue;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    text-align: left;
+    margin-top: 5.22vh;
+    color: #1E272E;
+    display: inline-block;
+
+}
+
+.dashboard_header_info_desc{
+    font-family: DM Sans;
+    font-size: 1.5vw;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+    text-align: left;
+    color:#566474;
+    margin-top: -1vh;
+}
+
+.dashboard_header_view_btn{
+    margin-top: 8.77vh;
+    margin-left: 15.056vw;
+    /* margin-right: 4.653vw; */
+}
+
+
