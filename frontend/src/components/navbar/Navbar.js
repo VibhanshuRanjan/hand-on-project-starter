@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Button from '../button/Button';
 import './Navbar.scss'
 
 
 const Navbar = (navbar) => {
-  const user=false;
+//   console.log(navbar.user.username,navbar.login);
   return(
       <div className="navbar">
           <div className="nav_left">
               <img src="/images/logo.svg" alt="Cuvette Logo" />
           </div>
-          {user?
+          {navbar.user.username?
           (<div className="nav_right">
               <div className="nav_right_myApis">
                   My APIs
@@ -24,9 +25,9 @@ const Navbar = (navbar) => {
           </div>):
           (
                 !navbar.login && (
-                    <div className="nav_btn">
+                    <Link className="nav_btn" to='/login'>
                         <Button value="Login" color="color-142683" size="size-133-44"/>
-                    </div>
+                    </Link>
 
                 )
               

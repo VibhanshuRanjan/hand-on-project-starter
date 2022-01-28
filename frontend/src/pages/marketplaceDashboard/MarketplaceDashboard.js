@@ -1,13 +1,14 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Navbar from '../../components/navbar/Navbar';
 import DashboardHeader from '../../components/dashboardHeader/DashboardHeader';
 import AllApis from '../../components/allApis/AllApis';
 import "./MarketplaceDashboard.scss"
 
-const MarketplaceDashboard = () => {
+const MarketplaceDashboard = (user) => {
   return (
     <div className="marketplaceDashboard">
-        <Navbar login={false}/>
+        <Navbar login={false} user={user}/>
         <div className="dashboard_body">
         <div className="dashboard_header">
             <DashboardHeader />

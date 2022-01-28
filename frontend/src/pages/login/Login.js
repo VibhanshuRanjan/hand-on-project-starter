@@ -1,13 +1,53 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
+import React,{useState} from 'react';
+import { Link,useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import Navbar from '../../components/navbar/Navbar';
 import Button from '../../components/button/Button';
 import './Login.scss'
 
-const Login = () => {
+const Login = ({setLoginUser}) => {
+    const navigate = useNavigate();
+    const [user,setUser] = useState({
+        email:"",
+        password:""
+    })
+
+    const handleChange = e => {
+        const {name,value} = e.target
+        setUser({
+            ...user,
+            [name]:value
+        })
+    }
+
+    const handleSubmit = async (e) => {
+           e.preventDefault();
+           const {email,password} = user
+           if(email && password){
+                const res = await axios.post("auth/login",user)
+                if(!res.data){
+                    alert("Wrong Credentials");
+                }
+                else{
+                    setLoginUser({
+                        username:res.data.username,
+                        id:res.data._id
+                    })
+                    localStorage.setItem('user', res.data)
+                    navigate("/")
+                }     
+           }
+           else{
+               alert("Invalid Input")
+           }
+           
+      };
+
   return (
       <div className="login">
-          <Navbar login={true}/>
+          <Navbar user={false} login={true}/>
           <div className="line"></div>
           <div className="login_sidebar">
               <div className="login_sidebar_card">
@@ -24,7 +64,7 @@ const Login = () => {
           </div>
           <div className="login_body">
               
-              <form action="" className="login_form">
+              <form action="" className="login_form" onSubmit={handleSubmit}>
                 <span className="login_form_heading">
                     Login to your account
                 </span>
@@ -32,12 +72,18 @@ const Login = () => {
                 className="login_input" 
                 type="text" 
                 placeholder="Email address" 
+                name="email"
+                value={user.email}
+                onChange={handleChange}
                 // ref = ""
                 />
                 <input 
                 className="login_input" 
                 type="text" 
                 placeholder="Password" 
+                name='password'
+                value={user.password}
+                onChange={handleChange}
                 // ref = ""
                 />
                 <Button color="color-E5E5E5" value="Login" size="size-400-44" className="login_button" />
